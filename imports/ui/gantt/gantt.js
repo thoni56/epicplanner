@@ -14,16 +14,16 @@ Template.gantt.onRendered(function () {
             datasets: [{
                 // Start
                 data: [500, 150, 300, 400, 500],
-                backgroundColor: "rgba(63,103,126,0)",
+                backgroundColor: "rgba(0,0,0,0)",
             }, {
                 data: [1000, 100, 200, 200, 100],
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
+                    'rgba(255, 99, 132, 0.3)',
+                    'rgba(54, 162, 235, 0.3)',
+                    'rgba(255, 206, 86, 0.3)',
+                    'rgba(75, 192, 192, 0.3)',
+                    'rgba(153, 102, 255, 0.3)',
+                    'rgba(255, 159, 64, 0.3)'
                 ],
                 borderColor: [
                     'rgba(255,99,132,1)',
