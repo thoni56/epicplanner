@@ -7,21 +7,19 @@ Template.gantt.onRendered(function () {
 
     chart = {
         target: 'chartDiv',
-        type: 'BarChart',
+        type: 'Timeline',
         columns: [
-            ['string', 'Topping'],
-            ['number', 'Slices']
+            ['string', 'Term'],
+            ['string', 'Name'],
+            ['date', 'Start'],
+            ['date', 'End']
         ],
         rows: [
-            ['Mushrooms', 3],
-            ['Onions', 1],
-            ['Olives', 1],
-            ['Zucchini', 1],
-            ['Pepperoni', 2]
+            ['1', 'George Washington', new Date(1789, 3, 30), new Date(1797, 2, 4)],
+            ['2', 'John Adams', new Date(1797, 2, 4), new Date(1801, 2, 4)],
+            ['3', 'Thomas Jefferson', new Date(1801, 2, 4), new Date(1809, 2, 4)]
         ],
         options: {
-            'title': 'How Much Pizza I Ate Last Night',
-            'width': 400,
             'height': 300
         }
     };
