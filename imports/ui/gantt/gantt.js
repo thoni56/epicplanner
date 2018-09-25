@@ -6,7 +6,7 @@ import './gantt.html';
 Template.gantt.onRendered(function () {
 
     chart = {
-        target: 'chartDiv',
+        target: 'chart_div',
         type: 'Timeline',
         columns: [
             ['string', 'Position'],
@@ -29,11 +29,12 @@ Template.gantt.onRendered(function () {
             ['Secretary of State', 'Charles Lee', new Date(1800, 4, 13), new Date(1800, 5, 5)],
             ['Secretary of State', 'John Marshall', new Date(1800, 5, 13), new Date(1801, 2, 4)],
             ['Secretary of State', 'Levi Lincoln', new Date(1801, 2, 5), new Date(1801, 4, 1)],
-            ['Secretary of State', 'James Madison', new Date(1801, 4, 2), new Date(1809, 2, 3)]
+            ['Secretary of State', 'James Madison', new Date(1801, 4, 2), new Date(1809, 2, 3)],
+            ['Secretary of State', 'James Madison', new Date(2801, 4, 2), new Date(2809, 2, 3)],
         ],
         options: {
             'height': 300,
-            timeline: { showRowLabels: false },
+            timeline: { showRowLabels: false }
         }
     };
 
