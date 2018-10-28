@@ -1,4 +1,4 @@
-import '../imports/ui/gantt/gantt';
+import '../imports/ui/capacityPlan/capacityPlan';
 import '../imports/ui/epicsList/epicsList';
 import '../imports/ui/insertEpicModal';
 
