@@ -1,30 +1,56 @@
 import { Template } from 'meteor/templating';
-
-import './capacityPlan.html';
 import { Epics } from '../../api/epics';
 
+import './capacityPlan.html';
+
 var ctx;
-const scale = 20;
+const scaleX = 1;
+const scaleY = 10;
 
-Template.capacityPlan.onRendered(function () {
-    const canvas = document.getElementById("planCanvas");
-    ctx = canvas.getContext("2d");
-    draw(20, 10, 150, 1);
-})
+export var currentX;
+export var currentY;
 
-Template.capacityPlan.helpers({
-    epics() { return Epics.find(); },
-    drawEpic() {
-        console.log(this);
+Template.capacityPlan.events({
+    'click #draw'(event) {
+        event.preventDefault();
+        if (!ctx) ctx = getContext();
+        clearCanvas();
+        currentX = currentY = 0;
+        var epics = Epics.find();
+        epics.forEach(function (epic) {
+            drawEpic(epic);
+        })
     }
 })
 
+function drawEpic(epic) {
+    draw(currentX, currentY, epic.effort, epic.height);
+    currentY += epic.height;
+}
+
+function getContext() {
+    const canvas = document.getElementById("planCanvas");
+    return canvas.getContext("2d");
+}
+
 function draw(x, y, effort, height) {
     ctx.fillStyle = randomHsl();
-    ctx.fillRect(x, y, effort / height, height * scale);
+    ctx.fillRect(x * scaleX, y * scaleY, effort / height, height * scaleY);
     ctx.stroke();
 }
 
 function randomHsl() {
     return 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 1)';
 }
+
+
+// Adapted after https://stackoverflow.com/a/50569351/204658
+function clearCanvas() {
+    ctx.save();
+    ctx.globalCompositeOperation = 'copy';
+    ctx.strokeStyle = 'transparent';
+    ctx.beginPath();
+    ctx.lineTo(0, 0);
+    ctx.stroke();
+    ctx.restore();
+  }
