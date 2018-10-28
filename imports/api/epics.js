@@ -26,6 +26,12 @@ Schemas.Epics = new SimpleSchema({
         type: Number,
         label: "Height",
         defaultValue: 1
+    },
+    color: {
+        type: String,
+        autoValue: function () {
+            return 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 1)';
+        }
     }
 });
 

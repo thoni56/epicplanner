@@ -8,7 +8,7 @@ want.
 
 ✔ Create Mongo document in autoform @done(18-10-28 13:20)
 ✔ List epics @done(18-10-28 14:59)
-☐ Draw a box
-☐ Draw a box with sizes from a Mongo document
-☐ Draw two boxes in order
-☐ Render epic with stored colour
+✔ Draw a box @done(18-10-28 21:29)
+✔ Draw a box with sizes from a Mongo document @done(18-10-28 21:29)
+✔ Draw two boxes in order @done(18-10-28 21:29)
+✔ Render epic with stored colour @done(18-10-28 23:13)

@@ -24,7 +24,7 @@ Template.capacityPlan.events({
 })
 
 function drawEpic(epic) {
-    draw(currentX, currentY, epic.effort, epic.height);
+    draw(currentX, currentY, epic.effort, epic.height, epic.color);
     currentY += epic.height;
 }
 
@@ -33,16 +33,11 @@ function getContext() {
     return canvas.getContext("2d");
 }
 
-function draw(x, y, effort, height) {
-    ctx.fillStyle = randomHsl();
+function draw(x, y, effort, height, color) {
+    ctx.fillStyle = color;
     ctx.fillRect(x * scaleX, y * scaleY, effort / height, height * scaleY);
     ctx.stroke();
 }
-
-function randomHsl() {
-    return 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 1)';
-}
-
 
 // Adapted after https://stackoverflow.com/a/50569351/204658
 function clearCanvas() {
