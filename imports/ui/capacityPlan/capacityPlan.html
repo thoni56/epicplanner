@@ -1,3 +1,6 @@
 <template name="capacityPlan">
     <canvas id="planCanvas"></canvas>
+    {{#each epics}}
+    {{drawEpic this}}
+    {{/each}}
 </template>
