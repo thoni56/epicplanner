@@ -1,0 +1,11 @@
+This is an experimental platform for creating a planning tool according to the
+
+    Responsive Epic Planner
+
+We've tried various Google Charts, including Timeline which was promising but
+since the height of the lines can't be adjusted it isn't usable for what we
+want.
+
+☐ Draw a box
+☐ Draw a box with sizes from a Mongo document
+☐ Draw two boxes in order
