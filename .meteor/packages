@@ -25,5 +25,5 @@ momentjs:moment
 underscore@1.0.10
 aldeed:autoform
 aldeed:collection2
-twbs:bootstrap
 peppelg:bootstrap-3-modal
+twbs:bootstrap

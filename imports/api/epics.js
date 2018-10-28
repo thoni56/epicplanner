@@ -7,10 +7,16 @@ export const Epics = new Mongo.Collection('Epics');
 SimpleSchema.extendOptions(['autoform']);
 
 Schemas.Epics = new SimpleSchema({
-    id: {
+    key: {
         type: String,
-        label: "Id",
-        max: 200
+        label: "Key",
+        max: 50
+    },
+    title: {
+        type: String,
+        label: "Title",
+        max: 200,
+        optional: true
     },
     effort: {
         type: Number,

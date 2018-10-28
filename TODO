@@ -6,6 +6,8 @@ We've tried various Google Charts, including Timeline which was promising but
 since the height of the lines can't be adjusted it isn't usable for what we
 want.
 
+✔ Create Mongo document in autoform @done(18-10-28 13:20)
+✔ List epics @done(18-10-28 14:59)
 ☐ Draw a box
 ☐ Draw a box with sizes from a Mongo document
 ☐ Draw two boxes in order

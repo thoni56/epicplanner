@@ -1,4 +1,5 @@
 import '../imports/ui/gantt/gantt';
+import '../imports/ui/epicsList/epicsList';
 import '../imports/ui/insertEpicModal';
 
 import './main.html';
