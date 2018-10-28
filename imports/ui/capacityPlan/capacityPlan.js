@@ -12,7 +12,11 @@ Template.capacityPlan.onRendered(function () {
 })
 
 function draw(x, y, effort, height) {
-    ctx.fillStyle = "red";
+    ctx.fillStyle = randomHsl();
     ctx.fillRect(x, y, effort / height, height * scale);
     ctx.stroke();
+}
+
+function randomHsl() {
+    return 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 1)';
 }
