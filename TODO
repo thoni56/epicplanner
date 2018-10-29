@@ -17,3 +17,5 @@ want.
 ☐ List epics in order
 ☐ Reorder epics
 ☐ Select only "nice" colours (pastell?)
+☐ Stop adding to Y-axis when capacity is filled
+☐ Add to first available spot when filled (could be generalized)
