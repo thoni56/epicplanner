@@ -27,12 +27,10 @@ Schemas.Epics = new SimpleSchema({
         label: "Height",
         defaultValue: 1
     },
-    importance: {
+    order: {
         type: Number,
         label: false,
-        autoValue: function () {
-            return new Date().getTime();
-        },
+        autoValue: function() { return 0; },
         autoform: {
             afFieldInput: {
                 type: "hidden"

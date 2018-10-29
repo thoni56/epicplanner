@@ -16,7 +16,7 @@ Template.capacityPlan.events({
         if (!ctx) ctx = getContext();
         clearCanvas();
         currentX = currentY = 0;
-        var epics = Epics.find({}, {"sort": { "importance":-1 }});
+        var epics = Epics.find({}, {"sort": { "order":1 }});
         epics.forEach(function (epic) {
             drawEpic(epic);
         })
