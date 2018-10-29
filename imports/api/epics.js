@@ -30,7 +30,7 @@ Schemas.Epics = new SimpleSchema({
     importance: {
         type: Number,
         label: false,
-        autoValue: function() { return 0; },
+        autoValue: function () { return 0; },
         autoform: {
             afFieldInput: {
                 type: "hidden"
@@ -41,7 +41,10 @@ Schemas.Epics = new SimpleSchema({
         type: String,
         label: false,
         autoValue: function () {
-            return 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 1)';
+            return 'hsla(' +
+                (360 * Math.random()) + ', ' +
+                (25 + 70 * Math.random()) + '% ,' +
+                (85 + 10 * Math.random()) + '%)';
         },
         autoform: {
             afFieldInput: {
