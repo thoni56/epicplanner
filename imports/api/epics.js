@@ -27,7 +27,7 @@ Schemas.Epics = new SimpleSchema({
         label: "Height",
         defaultValue: 1
     },
-    order: {
+    importance: {
         type: Number,
         label: false,
         autoValue: function() { return 0; },
