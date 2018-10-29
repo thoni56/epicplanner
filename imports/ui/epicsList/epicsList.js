@@ -6,6 +6,6 @@ import './epicItem.html';
 
 Template.epicsList.helpers({
     epics() {
-        return Epics.find();
+        return Epics.find({}, {"sort": { "importance":-1 }});
     }
 });
