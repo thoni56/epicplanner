@@ -12,3 +12,8 @@ want.
 ✔ Draw a box with sizes from a Mongo document @done(18-10-28 21:29)
 ✔ Draw two boxes in order @done(18-10-28 21:29)
 ✔ Render epic with stored colour @done(18-10-28 23:13)
+☐ Label epics with key
+☐ Use "velocity" to calculate x-scale
+☐ List epics in order
+☐ Reorder epics
+☐ Select only "nice" colours (pastell?)

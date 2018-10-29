@@ -1,5 +1,15 @@
 <template name="epicsList">
     <ul class="list-group">
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-sm-1">Key</div>
+                <div class="col-sm-6">Title</div>
+                <div class="col-sm-1">Effort</div>
+                <div class="col-sm-1">Height</div>
+                <div class="col-sm-1">Importance</div>
+            </div>
+        </li>
+
         {{#each epics}}
         {{> epicItem}}
         {{/each}}
