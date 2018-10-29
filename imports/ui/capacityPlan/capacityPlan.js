@@ -1,6 +1,8 @@
 import { Template } from 'meteor/templating';
 import { Epics } from '../../api/epics';
 
+import './epic';
+
 import './capacityPlan.html';
 
 var ctx;
@@ -9,6 +11,16 @@ const scaleY = 10;
 
 export var currentX;
 export var currentY;
+
+Template.capacityPlan.onRendered(function() {
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      });
+})
+
+Template.capacityPlan.helpers({
+    epics() { return Epics.find({}, {"sort": { "importance":-1 }}); }
+})
 
 Template.capacityPlan.events({
     'click #draw'(event) {

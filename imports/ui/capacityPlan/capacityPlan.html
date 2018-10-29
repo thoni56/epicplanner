@@ -1,4 +1,7 @@
 <template name="capacityPlan">
-    <canvas id="planCanvas" style="width:100%"></canvas>
-    <a href="#" id="draw" class="btn btn-primary">Draw</a>
+    <ul class="list-item-group" id="planElement" style="width:100%">
+        {{#each epics}}
+        {{> epic}}
+        {{/each}}
+    </ul>
 </template>
